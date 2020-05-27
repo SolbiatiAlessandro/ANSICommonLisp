@@ -41,3 +41,32 @@
     (if (= obj (first lst))
       true
       (is-member obj (rest lst)))))
+
+;; let
+(let [x 1 y 2] (+ x y))
+
+;; def
+(def x 2)
+(+ x x)
+
+;; iteration
+(dotimes [i 3]
+  (println i))
+
+(doseq [i `(1 4 3)]
+  (println i))
+
+;;higher order function
+(defn double-op [f a b]
+  (* 2 (f a b)))
+
+(double-op + 1 2)
+
+(defn add-two [x y]
+  (+ x y 2))
+
+(double-op add-two 1 2)
+
+;;anonymous functions
+(double-op (fn [x y] (+ x y 3)) 1 2)
+(double-op #(+ %1 %2 4) 1 2)
