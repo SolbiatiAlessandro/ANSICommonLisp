@@ -1,12 +1,4 @@
-(ns ansi-common-lisp.core)
-
-(defn foo
-  "I don't do a whole lot."
-  [x]
-  (println x "Helloa, World!"))
-
-(defn test [x]
-  (+ x 4))
+(ns ansi-common-lisp.chapter2)
 
 (+ 1 1)
 
@@ -40,7 +32,7 @@
     nil
     (if (= obj (first lst))
       true
-      (is-member obj (rest lst)))))
+      (my-member obj (rest lst)))))
 
 ;; let
 (let [x 1 y 2] (+ x y))
@@ -67,6 +59,6 @@
 
 (double-op add-two 1 2)
 
-;;anonymous functions
+;; anonymous functions
 (double-op (fn [x y] (+ x y 3)) 1 2)
 (double-op #(+ %1 %2 4) 1 2)
