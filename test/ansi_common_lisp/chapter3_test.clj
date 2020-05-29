@@ -3,5 +3,5 @@
             [ansi-common-lisp.chapter3 :refer :all]))
 
 (deftest compress-test
-  (testing "compress"
-    (is (= (compress `(1 1 1 0 1 0 0 0 0 1)) `((3 1) 0 1 (4 0) 1)))))
+  (testing "alex_compress"
+    (is (= (alex_compress `(1 1 1 0 1 0 0 0 0 1)) `((3 1) 0 1 (4 0) 1)))))
